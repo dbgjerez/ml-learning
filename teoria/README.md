@@ -12,8 +12,9 @@
 * https://github.com/joanby/python-ml-course/tree/master
 
 # Data Science
-## **Etapa 1:** toma de requisitos de negocio
-## **Etapa 2:** preparar los datos
-## **Etapa 3:** explorar los datos
-## **Etapa 4:** modelar y evaluar
-## **Etapa 5:** comunicación y puesta en producción
+## Etapas
+* **Etapa 1:** toma de requisitos de negocio
+* **Etapa 2:** preparar los datos
+* **Etapa 3:** explorar los datos
+* **Etapa 4:** modelar y evaluar
+* **Etapa 5:** comunicación y puesta en producción

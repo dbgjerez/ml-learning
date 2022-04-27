@@ -18,3 +18,8 @@
 * **Etapa 3:** explorar los datos
 * **Etapa 4:** modelar y evaluar
 * **Etapa 5:** comunicación y puesta en producción
+
+## Tipos
+* **Análisis retrospectivo:** en base al histórico
+* **Análisis predictivo:** predicción en base al pasado
+

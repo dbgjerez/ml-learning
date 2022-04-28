@@ -23,3 +23,9 @@
 * **Análisis retrospectivo:** en base al histórico
 * **Análisis predictivo:** predicción en base al pasado
 
+### Modelos predictivos
+Conjunto de algoritmos estadísticos que dado un conjunto de **datos históricos**, devuelven una **función matemática** útil en un determinado contexto de tiempo y ámbito. 
+
+Tipos de algoritmos estadísticos
+* **Algoritmos supervisados: **
+* **Algoritmos no supervisados: **

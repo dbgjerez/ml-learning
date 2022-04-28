@@ -27,5 +27,16 @@
 Conjunto de algoritmos estadísticos que dado un conjunto de **datos históricos**, devuelven una **función matemática** útil en un determinado contexto de tiempo y ámbito. 
 
 Tipos de algoritmos estadísticos
-* **Algoritmos supervisados: **
-* **Algoritmos no supervisados: **
+* **Algoritmos supervisados:** datos históricos tienen una variable de salida. 
+* **Algoritmos no supervisados:** no necesitan histórico.
+
+Herramientas de estadísticas a usar Open Source: 
+* **R**
+* **Pythib**
+
+La construcción del modelo:
+* Sobre datos pasados
+* Devisión en dos conjuntos:
+    * Entrenamiento
+    * Validación
+* Buscamos crear una función matemática o ecuación que represente la predicción

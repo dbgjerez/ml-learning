@@ -12,6 +12,12 @@
 * https://github.com/joanby/python-ml-course/tree/master
 
 # Data Science
+## Disciplinas
+* **Estadística**
+* **Algormitmos**
+* **Herramientas, técnicas y lenguajes de progración**
+* **Contexto empresarial**
+
 ## Etapas
 * **Etapa 1:** toma de requisitos de negocio
 * **Etapa 2:** preparar los datos
@@ -40,3 +46,4 @@ La construcción del modelo:
     * Entrenamiento
     * Validación
 * Buscamos crear una función matemática o ecuación que represente la predicción
+

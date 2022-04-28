@@ -47,3 +47,4 @@ La construcción del modelo:
     * Validación
 * Buscamos crear una función matemática o ecuación que represente la predicción
 
+La limpieza del dato será el 80% del tiempo. Es la tarea más complicada. 

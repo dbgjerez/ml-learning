@@ -5,3 +5,4 @@
 |b02-escribir-csv   |Fácil                          |Lectura y escritura de csv     |
 |b03-leer-url       |Fácil                          |Lectura de csv desde url       |
 |b04-conversor-json |Fácil                          |Convertir csv/xls a JSON       |
+|ex01-medals        |Fácil                          |Leer y procesar fichero con histórico de medallas|

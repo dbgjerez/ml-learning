@@ -76,8 +76,36 @@ Podemos ver también las columnas que tiene:
 data.columns.values
 ```
 
+El tipo de las columnas:
+```python
+data.dtypes
+```
+
 ### Resumen estadístico básico
 
 ```python
 data.describe()
 ```
+
+## Datos inválidos o datos que faltan
+Al hacer el describe por ejemplo, podemos ver que faltan datos. Porque el count, número de filas, no coincide con el ```count``` de las columnas.
+
+Existe una función que nos dice los valores que son nulos.
+
+```python
+pd.isnull(data["body"])
+```
+
+También tenemos la función ```notnull``` que hace lo contrario, esd ecir, decirnos cuales no son nulos.
+
+Para contar los datos que son nulos:
+```python
+data.isnull(data["body"]).values.ravel().sum()
+```
+
+> NOTE: ravel() normaliza el array en una sola dimensión
+
+Pueden venir valores nulos por dos motivos:
+* Falta a la hora de la extración de los datos: al exportar
+* Recolección de los datos: ni siquiera los tenemos en la base de datos, no hemos podido conseguirlos
+

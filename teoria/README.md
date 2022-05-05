@@ -48,3 +48,36 @@ La construcción del modelo:
 * Buscamos crear una función matemática o ecuación que represente la predicción
 
 La limpieza del dato será el 80% del tiempo. Es la tarea más complicada. 
+
+# Preparación de los datos
+Una vez preparados los datos es típico sacar estadística y diferentes métricas de lo smismos para asegurarnos de que está todo correcto y podemos empezar a realizar el modelo.
+
+## Resumen de los datos
+
+### Visualización previa:
+Ver n datos primeros datos
+```python
+data.head(10)
+```
+
+Ver los n últimos datos
+```python
+data.tail(8)
+```
+
+### Dimensión
+Es el tamaño, filas, columnas, etc.
+```python
+data.shape
+```
+
+Podemos ver también las columnas que tiene:
+```python
+data.columns.values
+```
+
+### Resumen estadístico básico
+
+```python
+data.describe()
+```

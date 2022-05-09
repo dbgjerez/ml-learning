@@ -121,3 +121,23 @@ data.dropna(axis=0, how=all)
 * **how=any:** borra la fila si cualquier dato de la columna es ```NaN```.
 * **axis=0:** borra la fila
 * **axis=1:** borra la columna
+
+#### Cómputo de los datos faltantes
+Se sustituyen los ```NaN``` por un valor concreto. Existen muchos métodos.
+
+Utilizaremos la función ```fillna```, esta función rellena los campos ```NaN``` con los valores que indiquemos. Podemos aplicar a todo el dataset o a una sola columna. 
+
+```python
+data = data["city"].fillna("Desconocido")
+data = data.fillna("Desconocido")
+```
+
+Existen diversas estrategias: 
+
+* **Rellenar con 0/texto:** no es muy buena, puesto que no tiene sentido en todos los casos.
+* **Promedio/meadiana,etc:** se rellena las columnas con el valor del promedio. por ejemplo: ```data["age].fillna(data["age"].mean())```
+
+Parámetros de fillna:
+
+* **ffill:** es forward fill, rellena con los valores más próximos hacia delante: ```data["age"].fillna(method="ffill")```
+* **backfill:** es back fill, rellena con los valores más próximos hacia detrás: ```data["age"].fillna(method="backfill")```

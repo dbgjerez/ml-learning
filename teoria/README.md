@@ -109,3 +109,15 @@ Pueden venir valores nulos por dos motivos:
 * Falta a la hora de la extración de los datos: al exportar
 * Recolección de los datos: ni siquiera los tenemos en la base de datos, no hemos podido conseguirlos
 
+### ¿Qué hacer con datos que faltan?
+#### Borrado de datos que faltan
+Podemos borrar toda la fila o toda la columna haciendo uso de la función ```dropna```. Normalmente borraremos filas cuando falten datos y borraremos columnas cuando no haya suficientes datos, por ejemplo que el x% de los datos de la columna sean ```NaN```
+
+```python
+data.dropna(axis=0, how=all)
+```
+
+* **how=all:** solo borra si todo es ```NaN```, es decir, todas las columnas de la fila. 
+* **how=any:** borra la fila si cualquier dato de la columna es ```NaN```.
+* **axis=0:** borra la fila
+* **axis=1:** borra la columna

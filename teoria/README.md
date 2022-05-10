@@ -142,3 +142,27 @@ Parámetros de fillna:
 * **ffill:** es forward fill, rellena con los valores más próximos hacia delante: ```data["age"].fillna(method="ffill")```
 * **backfill:** es back fill, rellena con los valores más próximos hacia detrás: ```data["age"].fillna(method="backfill")```
 
+## Variables categóricas
+Un claro ejemplo es el sexo, podemos tener una columna que sea ```sex``` pero nos interese, tener dos columnas, una llamada ```male``` y otra ```female```. De este modo podemos rellenar con ceros y unos según pertenezca o no a la categoria. 
+
+En python la libreria pandas tenemos la función ```get_dummies``` que se utiliza para esto:
+
+```python
+dummy_sex = pd.get_dummies(data["sex"], prefix="sex")
+```
+
+```dummy_sex``` contendrá un dataframe con un subconjunto de las variables dummy, ahora la idea sería concatenar al dataframe que tenemos: 
+
+```python
+data = pd.concat([data, dummy_sex], axis = 1)
+```
+
+Todo en una función definitiva sería de la siguiente forma: 
+
+```python
+def createDummies(df, var_name):
+    dummy = pd.get_dummies(df[var_name], prefix="var_name")
+    df = df.drop(var_name, axis = 1)
+    df = pd.concat([df, dummy], axis = 1)
+    return df
+```

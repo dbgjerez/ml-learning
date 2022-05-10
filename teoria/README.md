@@ -166,3 +166,34 @@ def createDummies(df, var_name):
     df = pd.concat([df, dummy], axis = 1)
     return df
 ```
+
+## Visualización del dataset
+Para visualizar en línea los diagramas se utiliza:
+
+```python 
+% matplotlib inline
+```
+
+Para guardar una gráfico o imagen, utilizamos: 
+
+```python
+savefig("path.png/jpeg")
+```
+
+### Scatter plot
+Es una nube de puntos. Se utiliza mucho cuando hay relación o dependencia entre dos columnas.
+
+```python
+data.plot(kind="scatter", x="column_a", y="column_b")
+```
+
+De esta manera se realizan representaciones básicas, si queremos comparar varias columnas, se utilizan paneles:
+
+```python
+import matplotlib.pyplot as plt
+figure, axs = plt-subplots(2,2, sharey=True, sharex=True)
+data.plot(king="scatter", x="column_a", y="column_b", ax=axs[0][0])
+data.plot(king="scatter", x="column_b", y="column_c", ax=axs[0][1])
+data.plot(king="scatter", x="column_a", y="column_c", ax=axs[1][0])
+data.plot(king="scatter", x="column_a", y="column_d", ax=axs[1][1])
+```

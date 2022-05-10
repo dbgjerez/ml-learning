@@ -180,6 +180,10 @@ Para guardar una gráfico o imagen, utilizamos:
 savefig("path.png/jpeg")
 ```
 
+Para dar un nombre al eje x se utiuliza ```plot.xlabel("txt")``` y para dar un nombre al eje y ```plot.ylabel("txt")```.
+
+Para definir un título se usa la función ```plt.title("title")```
+
 ### Scatter plot
 Es una nube de puntos. Se utiliza mucho cuando hay relación o dependencia entre dos columnas.
 
@@ -197,3 +201,12 @@ data.plot(king="scatter", x="column_b", y="column_c", ax=axs[0][1])
 data.plot(king="scatter", x="column_a", y="column_c", ax=axs[1][0])
 data.plot(king="scatter", x="column_a", y="column_d", ax=axs[1][1])
 ```
+
+### Histogramas
+Se visualizan los rangos de un solo vistazo. Se usa mucho para ver la distribución de los datos.
+
+```python
+plt.hist(data["column"], bins = 10)
+```
+
+```bins``` representa los rangos o "trocitos" en los que dividirlo. La ```Regla de Sturges``` nos indica el número de divisiones a realizar. Para aplicarla: ```int(np.ceil(1+np.log2(num_filas)))```

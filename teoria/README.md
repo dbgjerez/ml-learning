@@ -210,3 +210,12 @@ plt.hist(data["column"], bins = 10)
 ```
 
 ```bins``` representa los rangos o "trocitos" en los que dividirlo. La ```Regla de Sturges``` nos indica el número de divisiones a realizar. Para aplicarla: ```int(np.ceil(1+np.log2(num_filas)))```
+
+### Boxplot, diagrama de caja y bigotes
+Afina el histograma. La caja central es donde se distribuyen los datos. En el cuartil del 25% empiezarían los datos y se terminaría en el cuartil de los 75%. Es decir, la caja representa el 50% de los datos. La línea central representa la mediana.
+
+El bigote es el tamaño de la caja (cuartil 75 - cuartil 25) +- 1.5 veces el IQR (rango intercuartil). 
+
+```python
+plt.bxplot(data["column"])
+```

@@ -224,6 +224,8 @@ plt.bxplot(data["column"])
 Es el proceso de transformación y manipulación de datos para hacerlos más "analizables". En ocasiones los datos se reciben en crudo, o se encuentran en n bases de datos, por tanto hay que realizar un proceso de preparar los mismos. 
 
 ### Crear un subconjunto de datos
+
+#### Columnas
 A veces existen demasiadas columnas y muchas no nos son necesarias, por tanto podemos limpiar dicho dataset. 
 
 Para eliminar determinadas columnas:
@@ -240,3 +242,18 @@ undesired_columns = ["a","b","c"]
 sublist = [x for x in all_columns if x not in undesired_columns]
 subset = data[sublist]
 ```
+
+#### Filas
+
+Filtrado de filas según índice: 
+
+```python
+subset = data[0:25]
+```
+
+Es mucho más útil hacer dicho filtrado con condicionales. Un ejemplo sería quedarnos con aquellos usuario con más de 18 años:
+
+```python
+subset = data[data["age"]>18]
+```
+

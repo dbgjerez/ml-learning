@@ -219,3 +219,24 @@ El bigote es el tamaño de la caja (cuartil 75 - cuartil 25) +- 1.5 veces el IQR
 ```python
 plt.bxplot(data["column"])
 ```
+
+## Data Weangling 
+Es el proceso de transformación y manipulación de datos para hacerlos más "analizables". En ocasiones los datos se reciben en crudo, o se encuentran en n bases de datos, por tanto hay que realizar un proceso de preparar los mismos. 
+
+### Crear un subconjunto de datos
+A veces existen demasiadas columnas y muchas no nos son necesarias, por tanto podemos limpiar dicho dataset. 
+
+Para eliminar determinadas columnas:
+
+```python
+subset = data[["columna_a", "columna_b", "columna_c"]]
+```
+
+Otra forma es indicar cuales no quiero:
+
+```python
+all_columns = data.columns.values.tolist()
+undesired_columns = ["a","b","c"]
+sublist = [x for x in all_columns if x not in undesired_columns]
+subset = data[sublist]
+```

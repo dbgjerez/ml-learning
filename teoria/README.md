@@ -312,3 +312,6 @@ La función ```random``` tiene la opción de introducir la semilla:
 np.random.seed(2022)
 np.random.random()
 ```
+
+## Distribución de probabilidades
+Para la generación de datos se sigue dos tipos de distribuciones normalmente, la uniforme y la de Gauss

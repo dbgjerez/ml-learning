@@ -257,3 +257,29 @@ Es mucho más útil hacer dicho filtrado con condicionales. Un ejemplo sería qu
 subset = data[data["age"]>18]
 ```
 
+#### iloc y loc
+A veces nos interesa dar unas coordenadas de filas y columnas, para eso se utiliza dichas funciones.
+
+Con ```iloc``` diremos qué filas y qué columnas queremos preservar.
+
+```python
+data.iloc[:10, 3:6] ## de la fila 0 a la 10
+data.iloc[:10, :] ## 10 primeras filas y todas las columnas
+```
+
+Si queremos acceder por etiquetas o nombre de la columna, usaremos la función ```loc```.
+
+```python
+data.loc[:10, ["age"]] ## de la fila 0 a la 10 y columna age
+```
+
+
+### Generación de números aleatorios
+La generación de números aleatorios generará un número diferente cada vez que se llaman.
+
+La librería ```numpy``` es la librería que se suele utilizar para la generación de números aleatorios. 
+
+```python
+import numpy as np
+np.random.randint(1,100)
+```

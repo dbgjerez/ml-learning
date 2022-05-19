@@ -281,5 +281,25 @@ La librería ```numpy``` es la librería que se suele utilizar para la generaci�
 
 ```python
 import numpy as np
-np.random.randint(1,100)
+np.random.randint(1,100) ## número aleatorio entre 1 y 100
+np.random.random() ## número aleatorio con decimales entre 0 y 1
+```
+
+Una función muy útil para la generación de aleatorios, se encuentra en el paquete ```random```:
+
+```python
+import random
+random.randrange(0,100)
+```
+
+Otro método muy importante es ```shuffle```, el cuál reordena de forma aleatoria, una especie de barajado de los elementos del array.
+
+```python
+np.random.shuffle(number_list)
+```
+
+Por último, la función ```choice``` nos selecciona un valor aleatorio de un lista
+
+```python
+np.random.choice(number_list)
 ```

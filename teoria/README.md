@@ -303,3 +303,12 @@ Por último, la función ```choice``` nos selecciona un valor aleatorio de un li
 ```python
 np.random.choice(number_list)
 ```
+
+La generación de números aleatorios, a veces nos interesa conservarla, por ejemplo para poder reproducir:
+
+La función ```random``` tiene la opción de introducir la semilla:
+
+```python
+np.random.seed(2022)
+np.random.random()
+```

@@ -391,3 +391,14 @@ data = pd.DataFrame(
 )
 ```
 
+### Agrupación de datos por categorías 
+
+Para la agrupación, utilizaremos la función ```groupby```, la cual funciona de forma similar al SQL.
+
+Un ejemplo para agrupar por género en el punto anterior, sería: 
+
+```python
+grouped_gender = data.groupby("Gender")
+grouped_gender.groups
+grouped_gender.get_group("Female")
+```

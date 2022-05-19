@@ -313,10 +313,10 @@ np.random.seed(2022)
 np.random.random()
 ```
 
-## Distribución de probabilidades
+#### Distribución de probabilidades en generación de número aleatorios
 Para la generación de datos se sigue dos tipos de distribuciones normalmente, la uniforme y la de Gauss.
 
-### Distribución uniforme
+###### Distribución uniforme
 Este tipo de distribución hace que sea igual de probable cualquier numero dentro del rango.
 
 ```python
@@ -334,7 +334,7 @@ Si queremos pintarlo para comprobar la distribución:
 plt.hist(data)
 ```
 
-### Distribución normal
+###### Distribución normal
 La Distribución normal o la Campana de Gauss es la distribución que se suele dar en más del 98% de los casos de la vida. 
 
 Conforme vamos añadiendo datos, nos vamos acercando a una distribución normal. 
@@ -352,7 +352,9 @@ x = range(1,101)
 plt.hist(x,data)
 ```
 
-## Generación de Data Sets aleatorios
+### Generación de Data Sets aleatorios
+
+#### Datos numéricos
 
 Para la generación de un dataframe aleatorio, usuaremos directamente el constructor de pandas ```pd.DataFrame()```:
 
@@ -366,6 +368,8 @@ data = pd.DataFrame(
     }
 )
 ```
+
+#### Variables categóricas
 
 Para la generación de datos según información categórica utilizaremos ```numpy``` y ```pandas```.
 
@@ -386,3 +390,4 @@ data = pd.DataFrame(
     }
 )
 ```
+

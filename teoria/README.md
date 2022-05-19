@@ -314,4 +314,75 @@ np.random.random()
 ```
 
 ## Distribución de probabilidades
-Para la generación de datos se sigue dos tipos de distribuciones normalmente, la uniforme y la de Gauss
+Para la generación de datos se sigue dos tipos de distribuciones normalmente, la uniforme y la de Gauss.
+
+### Distribución uniforme
+Este tipo de distribución hace que sea igual de probable cualquier numero dentro del rango.
+
+```python
+import numpy as np
+a = 1
+b = 100
+n = 200
+data = np.random.uniform(a, b, n)
+```
+
+Si queremos pintarlo para comprobar la distribución: 
+
+```python
+%matplotlib inline
+plt.hist(data)
+```
+
+### Distribución normal
+La Distribución normal o la Campana de Gauss es la distribución que se suele dar en más del 98% de los casos de la vida. 
+
+Conforme vamos añadiendo datos, nos vamos acercando a una distribución normal. 
+
+La función ```randn``` nos genera números aleatorios siguiendo esta distribución. 
+
+```python
+data = np.random.randn(1000000)
+```
+
+Si los pintamos, podríamos ver la distribución de los valores:
+
+```python
+x = range(1,101)
+plt.hist(x,data)
+```
+
+## Generación de Data Sets aleatorios
+
+Para la generación de un dataframe aleatorio, usuaremos directamente el constructor de pandas ```pd.DataFrame()```:
+
+```python
+n = 1000
+data = pd.DataFrame(
+    {
+        'A' : np.random.randn(n), ## distribución en una normal 0, 1
+        'B' : 1.5 + 2.5 * np.random.randn(n), ## distribución según una normal en una media 1.5 con una desviación típica de 2.5
+        'C' : np.random.uniform(5, 32, n) ## distribución uniforme entre 5 y 32
+    }
+)
+```
+
+Para la generación de datos según información categórica utilizaremos ```numpy``` y ```pandas```.
+
+```python
+n = 1000
+
+gender = ["Male", "Female"]
+gender_data = []
+
+for i in range(0, n):
+    gender_data.append(np.random.choice(gender))
+age = 30 + 10 * np.random.rand(n)
+
+data = pd.DataFrame(
+    {
+        "Gender": gender_data,
+        "Age": age
+    }
+)
+```

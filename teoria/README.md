@@ -402,3 +402,34 @@ grouped_gender = data.groupby("Gender")
 grouped_gender.groups
 grouped_gender.get_group("Female")
 ```
+
+A los objetos agrupados se le pueden realizar las operaciones típicas de un DataFrame ya que son un subconjunto de datos, por ejemplo.
+
+```python
+grouped_gender.describe()
+```
+
+#### Aggregate
+
+Si queremos realizar un agregado o una serie de operaciones sobre las agrupaciones, podemos utilizar la función ```aggregate```. Dicha función se indica los nombres de las columnas y la función que queramos aplicar. 
+
+```python
+data.aggregate(
+    {
+        "Age": np.mean,
+        "Total": np.sum
+    }
+)
+```
+
+Otro ejemplo sería el uso de lambdas, el cual nos permite realizar una operación sobre una columna, por ejemplo, la fórmula de la velocidad es: ```v = e / t```
+
+```python
+data.aggregate(
+    {
+        "Speed": lambda v: e / t
+    }
+)
+```
+
+#### Filtrado

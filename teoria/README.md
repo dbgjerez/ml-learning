@@ -433,3 +433,36 @@ data.aggregate(
 ```
 
 #### Filtrado
+La función de filtrado va aplicando condiciones para ir eliminando datos de la salida:
+
+```python
+data["Age"].filter(lambda x: x > 18)
+```
+
+#### Transformación de variables
+La transformación de variables se realiza definiendo una lambda y aplicando la misma al dataset o a una serie de columnas deseadas:
+
+```python
+zscore = lambda x : (x - x.mean()) / x.std()
+z_group = group.transform(zscore)
+```
+
+La combinación de ```fillna``` junto a los ```transform``` nos ofrece una forma muy potente de rellenar datos que faltan.
+
+```python
+fill_na = lambda x: x.fillna(x.mean())
+data.transform(fill_na)
+```
+
+#### Ordenación y consulta
+Para consultar un elemento en una determinada fila, utilizaremos la función ```nth```, por ejemplo para el elemento en la posición 70: 
+
+```python
+data.nth(70)
+```
+
+La ordenación de datos se realiza haciendo uso de la función ```sort``` por uno o varias columnas:
+
+```python
+data.sort_values(["Age"])
+```

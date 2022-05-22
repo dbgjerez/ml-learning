@@ -486,9 +486,18 @@ testing = data[~check]
 #### Haciendo uso de la librería sklearn
 Librería estándar para la implementación de datos estadísticos. Con esta librería ya tenemos definidos los algoritmos necesarios:
 
-
 ```python
 from sklearn.model_selection import train_test_split
 train, test = train_test_split(data, test_size = 0.2)
 ```
 
+#### Usando una función de shuffle
+En este caso lo importante es que se "baraja" los datos y se puede reproducir modificando la semilla de random.
+
+```python
+import sklearn
+data = sklearn.utils.shuffle(data)
+cut_id = int(0.75 * len(data))
+train_data = data[_cut_id]
+test_data = data[cut_id+1:]
+```

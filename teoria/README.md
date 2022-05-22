@@ -470,9 +470,6 @@ data.sort_values(["Age"])
 ```
 
 ### División del conjunto de datos en entramiento y test
-```python
-from sklearn.model_selection import train_test_split
-```
 
 Normalmente se utiliza un porcentaje de 80%-20% de los datos para entrenar y para hacer el testing del modelo. 
 
@@ -486,4 +483,12 @@ training = data[check]
 testing = data[~check]
 ```
 
+#### Haciendo uso de la librería sklearn
+Librería estándar para la implementación de datos estadísticos. Con esta librería ya tenemos definidos los algoritmos necesarios:
+
+
+```python
+from sklearn.model_selection import train_test_split
+train, test = train_test_split(data, test_size = 0.2)
+```
 

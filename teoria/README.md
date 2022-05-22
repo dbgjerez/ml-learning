@@ -501,3 +501,19 @@ cut_id = int(0.75 * len(data))
 train_data = data[_cut_id]
 test_data = data[cut_id+1:]
 ```
+
+### Concatenación de datos
+Normalmente la fuente de datos procede de varios datasets, por tanto es importante poder generar un conjunto de datos único. 
+
+Para la combinación de datasets tenemos que tener en cuenta el tipo de eje:
+
+* axis = 0 denota el eje horizontal
+* axis = 1 denota el eje vertical
+
+La librería pandas nos facilita la concatenación:
+
+```python
+res_data = pd.concat([data_a, data_b], axis = 0)
+```
+
+En ocasiones tenemos cientos de csv, por ejemplo uno por día, uno por sensor, etc.

@@ -461,8 +461,29 @@ Para consultar un elemento en una determinada fila, utilizaremos la función ```
 data.nth(70)
 ```
 
+Además, tenemos las funciones ```head(n)``` para visualiza los primero n elementos y la función ```tail(n)``` para visualizar los n últimos elementos. 
+
 La ordenación de datos se realiza haciendo uso de la función ```sort``` por uno o varias columnas:
 
 ```python
 data.sort_values(["Age"])
 ```
+
+### División del conjunto de datos en entramiento y test
+```python
+from sklearn.model_selection import train_test_split
+```
+
+Normalmente se utiliza un porcentaje de 80%-20% de los datos para entrenar y para hacer el testing del modelo. 
+
+#### División utilizando distribución normal
+Quedarse con los primeros 80% de números generados de forma aleatoria:
+
+```python
+a = np.random.randn(len(data))
+check = (a<0.8)
+training = data[check]
+testing = data[~check]
+```
+
+

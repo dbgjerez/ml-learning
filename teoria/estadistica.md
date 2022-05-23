@@ -5,13 +5,9 @@
 
 # Conceptos
 ## Media
-La media o promedio es el valor obtenido de dividir la suma de todos los valores entre la cantidad de ellos
+La media o promedio es el valor obtenido de dividir la suma de todos los valores entre la cantidad de ellos: $$\frac{\sum{n}}{n}$$
 
-```math
-m=\sum{n} / n
-```
-
-* Desviación típica:
-* Proporción muestral:
+## Desviación típica
+## Proporción muestral
 
 # Constraste de hipótesis

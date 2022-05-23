@@ -517,3 +517,17 @@ res_data = pd.concat([data_a, data_b], axis = 0)
 ```
 
 En ocasiones tenemos cientos de csv, por ejemplo uno por día, uno por sensor, etc.
+
+En este caso será necesario unificar o seguir un determinado nombre dentro de los ficheros ya que serán importados en un bucle y se realizará un concatenado sobre el primero. 
+
+### Join de datasets
+El join de dos datasets se realiza de forma similar a SQL, es decir, a través de una clave única se cruzan los datos.
+
+#### Merge
+La librería pandas nos facilita una función de merge, la cuál nos une dos dataset a través de una clave principal, esto sería similar a un ```inner join```, por tanto se puede producir un duplicado de filas en caso de existir claves repetidas en algunos de los datasets.
+
+Para este tipo de operación, es importante tener ficheros de unión de 1:1, en vez de 1:n, por tanto se puede realizar una limpieza en el fichero de unión, haciendo uso de la función ```drop_duplicates```
+
+```python
+data = data.drop_duplicates(subset="User")
+```

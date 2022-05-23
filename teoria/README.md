@@ -532,7 +532,13 @@ Para este tipo de operación, es importante tener ficheros de unión de 1:1, en 
 data = data.drop_duplicates(subset="User")
 ```
 
+Para realizar los diferentes tipos de merge se indicara con el comando ```how``` de la función ```merge```
+```python
+merged_data = pd.merge(left = "data_a", right = "data_b", how = "inner")
+```
+
 #### Left join
+
 ![Left join](images/left-join.png)
 
 #### Inner join

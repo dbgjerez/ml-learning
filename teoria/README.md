@@ -531,3 +531,9 @@ Para este tipo de operación, es importante tener ficheros de unión de 1:1, en 
 ```python
 data = data.drop_duplicates(subset="User")
 ```
+
+#### Left join
+#### Inner join
+![Inner join](images/inner-join.png)
+
+#### Right join

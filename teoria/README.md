@@ -533,7 +533,10 @@ data = data.drop_duplicates(subset="User")
 ```
 
 #### Left join
+![Left join](images/left-join.png)
+
 #### Inner join
 ![Inner join](images/inner-join.png)
 
 #### Right join
+![Right join](images/right-join.png)

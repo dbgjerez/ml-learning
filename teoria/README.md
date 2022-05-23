@@ -540,3 +540,6 @@ data = data.drop_duplicates(subset="User")
 
 #### Right join
 ![Right join](images/right-join.png)
+
+#### Outer join
+Nos devuelve lo que tenga A y B.

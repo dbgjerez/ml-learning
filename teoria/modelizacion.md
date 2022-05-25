@@ -13,3 +13,5 @@ Para realizar un contraste de hipótesis:
 * Calcular el z-valor o el t-valor.
 * Calcular el p-valor asociado
 * Comprar p-valor y nivel de significación
+
+## Correlación

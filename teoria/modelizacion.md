@@ -41,3 +41,13 @@ plt.matshow(data.corr())
 ```
 
 ## Regresión lineal
+
+Cuando realizamos una predicción tenemos las **variables predictoras** en el eje x y la **variable de salida** es el eje y. 
+
+Una regresión lineal requiere n datos de entrada pero solo una variable de salida. Esta variable de salida se verá reflejada por una ecuación.
+
+El objetivo es minimizar el error sobre los valores que tenemos.
+
+$$y = \alpha + \beta * x + \epsilon $$
+
+Existe un valor residual de error que se define como epsilon y tiene una distribución normal. 

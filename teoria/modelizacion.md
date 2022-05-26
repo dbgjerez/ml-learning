@@ -24,14 +24,20 @@ El coeficiente de Colleración de Pearson nos indica cómo de fuerte es esa corr
 
 El coeficiente tiene sentido entre [-1, -0.6] y [0.6, 1] según sea negativa o positiva. 
 
+Pandas nos da automáticamente los coeficientes de correlación: 
+
 ```python
-def corr_coeff(df, var1, var2):
-    df["corrn"] = (df[var1] - np.mean(df[var1]))* (df[var2] - np.mean(df[var2]))
-    df["corr1"] = (df[var1] - np.mean(df[var1]))**2
-    df["corr2"] = (df[var2] - np.mean(df[var2]))**2
-    corr_p = sum(df["corrn"])/np.sqrt(sum(df["corr1"]) * sum(df["corr2"]))
-    return corr_p
+data.corr()
 ```
 
 ### Nube de puntos
 La nube de puntos es una buena representación gráfica de la correlación entre variables.
+
+### Matshow
+Nos pintaría directamente una matriz de correlación y lo vemos rápidamente de un vistazo.
+
+```python
+plt.matshow(data.corr())
+```
+
+## Regresión lineal

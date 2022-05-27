@@ -52,18 +52,24 @@ $$y = \alpha + \beta * x + \epsilon $$
 
 Existe un valor residual de error que se define como epsilon y tiene una distribución normal. 
 
-### SSD
+### SSD, SST y SSR
 El valor **SSD** es la dife entre el valor estimado y el valor observado, es decir, la diferencia del modelo.
 
-### SST
 El valor **SST** es la distancia entre el valor estimado y el promedio. 
 
-### SSR
 La diferencia entre el valor estimado y la media es el **SSR**.
 
-### Fórmula de los errores
 $$ SST = SSR + SSD $$
 
 Cuanto más se acerque el valor a 1, mejor será nuestro modelo ya que habrá menos error. 
 
 $$ R^2 = \frac{SSR}{SST} $$
+
+### p valor
+Si el p-valor resultante es menor que el nivel de aceptación, rechazamos la hipótesis nula y aceptamos que existe una relación entre x e y.
+
+### Regresión lineal múltiple
+Para realizar una regresión lineal múltiple es encesario mirar el nivel de significación de cada parámetro por separado.
+
+### Error estándar de los residuos (RSE)
+Es la desviación estándar del error. Este valor cuanto menor sea mejor. 

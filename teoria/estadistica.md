@@ -39,6 +39,3 @@ $$\Longrightarrow \sigma=\sqrt{\frac{(1-4.2)^2 + (2-4.2)^2 + (4-4.2)^2 + (7-4.2)
 $$\Longrightarrow \sigma = 2.481934$$
 
 
-## Proporción muestral
-
-# Constraste de hipótesis

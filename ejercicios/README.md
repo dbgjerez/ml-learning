@@ -8,4 +8,5 @@
 |ex01-medals        |Fácil                          |Leer y procesar fichero con histórico de medallas|
 |m01-aleatorio-agrupación|Media|Generación de datos aleatorios, pintarlos y realizar operación de agrupación sobre los mismos|
 |c01-regresion-lineal-teoria|Completo|Conceptos indicados en la teoría|
-|c01-regresion-lineal-python|Completo|Ejemplo real de cómo implementar una regresión lineal simple y compuesta|
+|c02-regresion-lineal-python|Completo|Ejemplo real de cómo implementar una regresión lineal simple y compuesta|
+|m02-validacion-model|Media|Validación de modelo con ejemplo sobre ejercicio ```c02-regresion-lineal-python```|

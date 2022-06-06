@@ -9,4 +9,5 @@
 |m01-aleatorio-agrupación|Media|Generación de datos aleatorios, pintarlos y realizar operación de agrupación sobre los mismos|
 |c01-regresion-lineal-teoria|Completo|Conceptos indicados en la teoría|
 |c02-regresion-lineal-python|Completo|Ejemplo real de cómo implementar una regresión lineal simple y compuesta|
-|m02-validacion-model|Media|Validación de modelo con ejemplo sobre ejercicio ```c02-regresion-lineal-python```|
+|m02-validacion-modelo|Media|Validación de modelo con ejemplo sobre ejercicio ```c02-regresion-lineal-python```|
+|r01-regresion-lineal|Real|Ejemplo con scikit-learn para regresión lineal|

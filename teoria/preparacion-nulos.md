@@ -70,6 +70,12 @@ data.dropna(axis=0, how=all)
 * **axis=0:** borra la fila
 * **axis=1:** borra la columna
 
+### Borrado de la columna completa
+
+```python
+data.drop(col, axis=1)
+```
+
 ### Cómputo de los datos faltantes
 Se sustituyen los ```NaN``` por un valor concreto. Existen muchos métodos.
 

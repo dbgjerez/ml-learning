@@ -36,7 +36,7 @@ data.dtypes
 data.describe()
 ```
 
-## Datos inválidos o datos que faltan
+## Datos inválidos o nulos
 Al hacer el describe por ejemplo, podemos ver que faltan datos. Porque el count, número de filas, no coincide con el ```count``` de las columnas.
 
 Existe una función que nos dice los valores que son nulos.
@@ -58,8 +58,7 @@ Pueden venir valores nulos por dos motivos:
 * Falta a la hora de la extración de los datos: al exportar
 * Recolección de los datos: ni siquiera los tenemos en la base de datos, no hemos podido conseguirlos
 
-### ¿Qué hacer con datos que faltan?
-#### Borrado de datos que faltan
+### Borrado de datos nulos o inválidos
 Podemos borrar toda la fila o toda la columna haciendo uso de la función ```dropna```. Normalmente borraremos filas cuando falten datos y borraremos columnas cuando no haya suficientes datos, por ejemplo que el x% de los datos de la columna sean ```NaN```
 
 ```python
@@ -71,7 +70,7 @@ data.dropna(axis=0, how=all)
 * **axis=0:** borra la fila
 * **axis=1:** borra la columna
 
-#### Cómputo de los datos faltantes
+### Cómputo de los datos faltantes
 Se sustituyen los ```NaN``` por un valor concreto. Existen muchos métodos.
 
 Utilizaremos la función ```fillna```, esta función rellena los campos ```NaN``` con los valores que indiquemos. Podemos aplicar a todo el dataset o a una sola columna. 
@@ -90,3 +89,16 @@ Parámetros de fillna:
 
 * **ffill:** es forward fill, rellena con los valores más próximos hacia delante: ```data["age"].fillna(method="ffill")```
 * **backfill:** es back fill, rellena con los valores más próximos hacia detrás: ```data["age"].fillna(method="backfill")```
+
+### SimpleImputer
+La función SimpleImputer de la libreria sklearn nos facilita el rellenado de datos con valores específicos. Por defecto se utilizará la media:
+
+Es muy importante utilizar la función ```fit_transform``` para el dataset de entrenamiento y ```transform```para el dataset de validación.
+
+```python
+from sklearn.impute import SimpleImputer
+
+imputer=SimpleImputer() 
+imputed_X_train = pd.DataFrame(imputer.fit_transform(X_train))
+imputed_X_valid = pd.DataFrame(imputer.transform(X_valid))
+```

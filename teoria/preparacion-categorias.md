@@ -36,3 +36,30 @@ ordinal_encoder = OrdinalEncoder()
 label_X_train[good_label_cols] = ordinal_encoder.fit_transform(X_train[good_label_cols])
 label_X_valid[good_label_cols] = ordinal_encoder.transform(X_valid[good_label_cols])
 ```
+
+Este tipo de técnica se suele emplear cuando la cardinalidad de la columna es alta, es decir, existen muchas claves diferentes. Para saber qué columnas tienen una cardinalidad alta:
+
+```python
+low_cardinality_cols = [col for col in object_cols if X_train[col].nunique() < 10]
+```
+
+## OneHotEncoder
+En este caso se crean n nuevas columnas, una por cada clave en la columna original. En caso de que el valor fuese el de dicha columna, se pondrá un 1, en caso contrario, un 0.
+
+```python
+OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
+OH_cols_train = pd.DataFrame(OH_encoder.fit_transform(X_train[low_cardinality_cols]))
+OH_cols_valid = pd.DataFrame(OH_encoder.transform(X_valid[low_cardinality_cols]))
+
+# One-hot encoding removed index; put it back
+OH_cols_train.index = X_train.index
+OH_cols_valid.index = X_valid.index
+
+# Remove categorical columns (will replace with one-hot encoding)
+num_X_train = X_train.drop(object_cols, axis=1)
+num_X_valid = X_valid.drop(object_cols, axis=1)
+
+# Add one-hot encoded columns to numerical features
+OH_X_train = pd.concat([num_X_train, OH_cols_train], axis=1)
+OH_X_valid = pd.concat([num_X_valid, OH_cols_valid], axis=1)
+```

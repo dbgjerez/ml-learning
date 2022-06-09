@@ -71,9 +71,17 @@ data.dropna(axis=0, how=all)
 * **axis=1:** borra la columna
 
 ### Borrado de la columna completa
+Se puede realizar el borrado completo de una columna: 
 
 ```python
 data.drop(col, axis=1)
+```
+
+### Borrado de columna por tipo
+Se puede realizar el borrado de una columna o varias según el tipo de dato que contiene, por ejemplo para borrar todas las columnas con variables categóricas: 
+
+```python
+data = data[data.select_dtypes(exclude=['object])]
 ```
 
 ### Cómputo de los datos faltantes

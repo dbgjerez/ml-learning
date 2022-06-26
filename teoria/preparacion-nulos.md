@@ -81,7 +81,7 @@ data.drop(col, axis=1)
 Se puede realizar el borrado de una columna o varias según el tipo de dato que contiene, por ejemplo para borrar todas las columnas con variables categóricas: 
 
 ```python
-data = data[data.select_dtypes(exclude=['object])]
+data = data[data.select_dtypes(exclude=['object'])]
 ```
 
 ### Cómputo de los datos faltantes

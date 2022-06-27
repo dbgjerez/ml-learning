@@ -5,6 +5,8 @@
 Class to fill the null values with a specific strategic.
 
 ```python
+from sklearn.base import BaseEstimator, TransformerMixin
+
 class CustomImputer(BaseEstimator, TransformerMixin):
     def __init__(self, imputer, strategy, fill_value=0):
         self.imputer = imputer

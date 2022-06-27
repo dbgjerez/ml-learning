@@ -45,7 +45,7 @@ def correlation(self, df, y):
 Function that return a table with a total of missing values and the percent of them respect to the total. 
 
 ```python
- def missing_data(self, df):
+    def missing_data(self, df):
         missing = df.isnull().sum().sort_values(ascending=False)
         total_missing = missing[missing != 0]
         percent_missing = np.around(((missing / len(df) * 100)[(missing / len(df) * 100) != 0]), decimals=2)

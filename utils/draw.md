@@ -51,3 +51,16 @@ Function that return a table with a total of missing values and the percent of t
         percent_missing = np.around(((missing / len(df) * 100)[(missing / len(df) * 100) != 0]), decimals=2)
         return pd.concat([total_missing, percent_missing], axis=1, keys = ['Total', 'Percent'])
 ```
+
+## Categorical data
+
+```python
+    def categorical(selft, df, cols):
+        plt.figure(figsize=(18,20))
+        for i in range(len(cols.columns)):
+            plt.subplot(11,4,i+1)
+            sns.countplot(x=cols.iloc[:, i], data=cols.dropna())
+            plt.xticks(rotation=90)
+        plt.tight_layout()
+        plt.show()
+```
